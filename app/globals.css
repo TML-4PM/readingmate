@@ -1,0 +1,91 @@
+:root {
+  --sage: #4a7c59;
+  --sage-light: #7fb08f;
+  --cream: #faf7f2;
+  --warm-white: #fffdf9;
+  --charcoal: #1a1a1a;
+  --mid: #5a5a5a;
+  --accent: #e8a838;
+  --accent-deep: #c4851a;
+  --soft-blue: #d4e8f0;
+  --border: #e8e2d9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.2; }
+
+a { color: inherit; text-decoration: none; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--warm-white);
+  position: sticky; top: 0; z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--sage);
+}
+
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-size: 0.95rem; color: var(--mid); transition: color 0.2s; }
+.nav-links a:hover { color: var(--charcoal); }
+
+.btn-primary {
+  background: var(--sage);
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.1s;
+  display: inline-block;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--sage-light); transform: translateY(-1px); }
+
+.btn-secondary {
+  border: 1.5px solid var(--border);
+  color: var(--charcoal);
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  display: inline-block;
+  background: transparent; cursor: pointer;
+}
+.btn-secondary:hover { border-color: var(--sage); color: var(--sage); }
+
+.cross-sell {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.cross-sell h3 { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-bottom: 1.5rem; }
+.cross-sell-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.cross-sell-links a { font-size: 0.95rem; color: var(--sage); font-weight: 500; transition: color 0.2s; }
+.cross-sell-links a:hover { color: var(--accent-deep); }
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--mid);
+  border-top: 1px solid var(--border);
+}
